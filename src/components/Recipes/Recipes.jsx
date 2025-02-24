@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 import Table from "../Table/Table";
 import CurrentCooking from "../CurrentCooking/CurrentCooking";
+import { ToastContainer, toast } from 'react-toastify';
+// import { ToastBar } from "react-hot-toast";
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState([])
@@ -19,7 +21,11 @@ const Recipes = () => {
             let newCook = [...cook, recipe]
             setCook(newCook)
         }
+        else{
+            toast('Already added this')
+        }
     }
+    
     const handleDelete = (id) => {
         const current = [...currentCook, id]
         setCurrentCook(current)
@@ -29,6 +35,7 @@ const Recipes = () => {
 
     return (
         <div className="space-y-6 container">
+            <ToastContainer />
             <h1 className="text-center font-bold text-5xl">Our Recipe</h1>
             <p className="text-center text-[#150B2B99]">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget <br /> urna volutpat curabitur elementum mauris aenean neque. </p>
 
