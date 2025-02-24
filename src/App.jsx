@@ -3,6 +3,7 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
+import Recipes from './components/Recipes/Recipes'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -16,7 +17,7 @@ function App() {
         <Banner></Banner>
       </div>
       <div className='my-10'>
-          
+          <Recipes></Recipes>
       </div>
     </>
   )
