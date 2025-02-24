@@ -2,9 +2,8 @@ import PropTypes from 'prop-types'; // ES6
 import { IoMdTime } from "react-icons/io";
 import { FaFire } from "react-icons/fa";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleCookBtn }) => {
     const { recipe_image, title, short_description, ingredients, preparing_time, calories } = recipe
-    console.log(recipe)
     return (
         <div className='m-w-[400px] p-8 rounded-2xl shadow-2xl'>
             <div>
@@ -26,13 +25,14 @@ const Recipe = ({ recipe }) => {
                 <p className='text-sm text-[#282828CC] flex items-center gap-2'><span><IoMdTime></IoMdTime></span>{preparing_time} Miniutes</p>
                 <p className='text-sm text-[#282828CC] flex items-center gap-2'><span><FaFire></FaFire></span>{calories} Calories</p>
             </div>
-            <button className='primary-btn'>Want To Cook</button>
+            <button onClick={() => handleCookBtn(recipe)} className='primary-btn'>Want To Cook</button>
         </div>
     );
 };
 
 Recipe.propTypes = {
-    recipe: PropTypes.object.isRequired
+    recipe: PropTypes.object.isRequired,
+    handleCookBtn: PropTypes.func.isRequired
 }
 
 export default Recipe;
