@@ -20,11 +20,11 @@ const Table = ({ cook, handleDelete }) => {
                     <tbody className='w-full space-y-5 overflow-hidden text-[#282828B3]'>
                         {cook.map((row, idx) => (
                             <tr key={idx} className="p-2  text-center bg-[#28282808]">
-                                <td className="py-2 px-4">{idx + 1}</td>
-                                <td className="py-2 px-4">{row.title}</td>
-                                <td className="py-2 px-4">{row.preparing_time} Minutes</td>
-                                <td className="py-2 px-4">{row.calories} calories</td>
-                                <td className="py-2 px-4">
+                                <td className="md:py-2 md:px-4">{idx + 1}</td>
+                                <td className="md:py-2 md:px-4">{row.title}</td>
+                                <td className="md:py-2 md:px-4">{row.preparing_time} Minutes</td>
+                                <td className="md:py-2 md:px-4">{row.calories} calories</td>
+                                <td className="md:py-2 md:px-4">
                                     <button
                                         onClick={() => handleDelete(row)}
                                         className=" font-medium cursor-pointer px-3 py-1 rounded-lg bg-[#0BE58A] transition">

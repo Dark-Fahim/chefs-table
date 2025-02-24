@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const CurrentCooking = ({currentCook}) => {
-    console.log(currentCook)
     let totalTime = 0
     let totalCalories = 0
     for(const time of currentCook){
