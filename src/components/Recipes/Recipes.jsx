@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 import Table from "../Table/Table";
+import CurrentCooking from "../CurrentCooking/CurrentCooking";
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState([])
@@ -44,7 +45,7 @@ const Recipes = () => {
                     <Table 
                     handleDelete={handleDelete}
                     cook={cook}></Table>
-                    {/* <Table cook={cook}> </Table> */}
+                    <CurrentCooking currentCook={currentCook}></CurrentCooking>
                 </div>
             </div>
         </div>
